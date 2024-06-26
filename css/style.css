@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.giphy-container {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 2; 
+    
+}
+
+.camel-container {
+    position: absolute;
+    top: 54%;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 2; 
+    animation: moveLeft 4s linear infinite; 
+    
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.score-container{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.987);
+    color: black;
+    z-index: 3;
+    left:90%;
+    font-size: 20px;
+    font-weight: 600;
+    /* width: 50px; */
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 5px 5px;
+}
+.outModal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 3;
+    background-color: beige;
+    box-shadow: 5px 5px 10px rgb(213, 212, 212);
+    height: 50%;
+    width: 50%;
+    left: 20%;
+    top:20%;
+    
+}
+.outModalContainer{
+    display: none;
+}
+
+.tryAgain{
+    background-color: rgb(46, 139, 32);
+    color:white;
+    /* height: 30px;*/
+    width:120px; 
+    border: 2px solid rgb(20, 88, 20);
+    font-size: 20px;
+}
+
